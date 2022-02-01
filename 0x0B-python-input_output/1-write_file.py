@@ -4,7 +4,7 @@ write
 """
 
 
-def read_file(filename=""):
+def write_file(filename=""):
     """
     write a text file
     """
