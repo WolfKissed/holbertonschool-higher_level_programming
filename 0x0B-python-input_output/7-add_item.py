@@ -2,14 +2,17 @@
 """
 adds argv to a list
 """
-import sys
 
-_save = __import__('5-save_to_json_file').save_to_json_file
-_load = __import__('6-load_from_json_file').load_from_json_file
 
-open("add_item.json", "a")
+from sys import argv
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+
+filename = "add_item.json"
+
 try:
-    x = _load("add_item.json")
-except ValueError:
+    x = load_from_json_file(filename)
+except FileNotFoundError:
     x = []
-_save(x + sys.argv[1:], "add_item.json")
+
+save_to_json_file(x + argv[1:], filename)
