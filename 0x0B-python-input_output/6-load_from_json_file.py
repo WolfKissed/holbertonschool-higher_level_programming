@@ -1,6 +1,8 @@
 
 #!/usr/bin/python3
-"""load from json file"""
+"""
+load from json file
+"""
 import json
 
 
