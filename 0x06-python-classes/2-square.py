@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Def class
+define a class Square
 """
 
 
@@ -18,4 +18,3 @@ class Square:
             self.__size = size
         else:
             raise ValueError('size must be >= 0')
-
