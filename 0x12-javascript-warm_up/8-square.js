@@ -1,9 +1,9 @@
 #!/usr/bin/node
-const size = process.argv[2];
-if (isNaN(size)) {
+const x = process.argv[2];
+if (isNaN(x)) {
   console.log('Missing size');
 }
 const a = new Array(Number(size)).fill('X').join('');
-for (let i = 0; i < size; i++) {
+for (let i = 0; i < x; i++) {
   console.log(a);
 }
