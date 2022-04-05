@@ -1,9 +1,5 @@
 #!/usr/bin/node
-module.exports = class Rectangle {
-  constructor (w, h) {
-    if (w > 0 && h > 0) {
-      this.width = w;
-      this.height = h;
-    }
-  }
-};
+const a = require('./100-data.js').list;
+console.log(a);
+const b = a.map((x, index) => x * index);
+console.log(b);
